@@ -52,6 +52,14 @@ $$
 L_{\theta} = D^{-1}\_{S \lambda^0} \tilde{L^0} D_{\hat{V}} S \lambda^0
 $$
 
+Finally, we have the following vectorized optimization:
+
+$$
+argmin\_{\lambda} || D\_A D\_w (\tilde{L^0} D\_{\hat{V}} - D\_{L\_{theta}}) S \lambda ||^2
+$$
+
+subject to the constraints we outlined above.
+
 1. No z-ordering
 2. No disconnected groups
 3. Convert to conic problem
