@@ -23,7 +23,14 @@ This project includes two sample meshes in the `data` directory, `bunny.off` and
 
 ## Demo
 
-hey
+The demo deforms the selected mesh for two distinct viewpoints. One is located directly in front of the mesh along the z-axis and is represented by a green point, and the other is offset to the right of first viewpoint and is
+represented by a blue point. In both cases, the original mesh is projected onto a plane directly behind the mesh. 
+
+To view the original mesh, click `1`. To view the deformed mesh for the first viewpoint, click `2`. To view the deformed mesh for the third viewpoint, click `3`.
+
+NOTE: Deforming the `bunny.off` mesh takes a significant time to run (approximately 15 minutes on my device).
+
+![Viewpoint 1, Original Mesh](.\images\c_viewpoint1_original.png)
 
 ## Implementation
 
