@@ -19,7 +19,7 @@ Once built, you can execute the demo from inside the `build` directory using
 
     ./ams [path to mesh]
 
-This prject includes two sample meshes in the `data` directory, `bunny.off` and `decimated-knight.off`.
+This project includes two sample meshes in the `data` directory, `bunny.off` and `decimated-knight.off`.
 
 ## Implementation
 
@@ -37,7 +37,20 @@ $$
 d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})_{i} - (L^0 D_{\lambda^0} \hat{V})_{i} \frac{\lambda_i}{\lambda^0_i} ||^2
 $$
 
-This implementation lacks two components of the full scope of paper. Firstly, it does not implement...
+To constrain the volume of the deformed mesh, we define $\lambda^{min}_i$ and $\lambda^{max}_i$ such that:
+
+$$
+\lambda^{min}_i \leq \lambda_i \leq \lambda^{max}_i
+$$
+
+This gives a set of linear inequalities to account for while solving. To avoid rank deficiency in the optimization, we also constrain the value of $\lambda_i$ for a vertex $i$. This gives a linear equality to account for while solving.
+
+To efficiently solve this problem, the paper outlines how to vectorize this optimization. Let $D_A$ and $D_w$ be diagonal matrices with the areas $A^0_i$ and weights $w_i$ along their respective diagonals. Let
+$\tilde{L^0} = L^0 \bigotimes I_3$.
+
+1. No z-ordering
+2. No disconnected groups
+3. Convert to conic problem
 
 ## References
 1. PAPER REFERENCE HERE
