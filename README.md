@@ -21,6 +21,10 @@ Once built, you can execute the demo from inside the `build` directory using
 
 This project includes two sample meshes in the `data` directory, `bunny.off` and `decimated-knight.off`.
 
+## Demo
+
+hey
+
 ## Implementation
 
 This project implements the main goal of the paper, constraining a 3D object to a specific volume while maintaining its appearance from a specific viewpoint. 
@@ -60,9 +64,18 @@ $$
 
 subject to the constraints we outlined above.
 
-1. No z-ordering
-2. No disconnected groups
-3. Convert to conic problem
+As such, the majority of this project's implementation is constructing these matrices and manipulating them into a form that can be fed into libigl's quadratic program solver, `active_set`.
+
+## Future Improvements
+
+This implementation lacks two main features from the paper description. The first is the lack of z-ordering constraints; as a result, it is possible and likely for the mesh to contain self-intersections. In the future,
+these z-ordering constraints can be implemented to preserve the order of vertices with respect to the viewpoint. The second is the lack of support for projecting onto disconnected pieces. Note that, although we did not
+include the $mu$ values in the brief derivation above because it does not function correctly with this implementation, much of the implementation has been written as if the feature were present; as a result, this feature
+could be added in the future without having to significantly refactor the existing code.
+
+Finally, as previously mentioned, the implementation use's the libigl function `active_set` to solve the quadratic problem. The paper outlines a process to convert this optimization to a linear energy minimization with conic
+constraints to improve performance. To my knowledge, libigl does not currently contain a function to solve this kind of optimization, so other tools such as Mosek would need to be used if this improvement were to be implemented.
 
 ## References
-1. PAPER REFERENCE HERE
+Christian Schüller, Daniele Panozzo, and Olga Sorkine-Hornung. 2014. Appearance-mimicking surfaces. ACM Trans. Graph. 33, 6, Article 216 (November 2014), 10 pages. https://doi.org/10.1145/2661229.2661267
+
