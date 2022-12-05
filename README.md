@@ -55,7 +55,7 @@ $$
 Finally, we have the following vectorized optimization:
 
 $$
-argmin\_{\lambda} || D\_A D\_w (\tilde{L^0} D\_{\hat{V}} - D\_{L\_{theta}}) S \lambda ||^2
+argmin\_{\lambda} \hspace{10pt} || D\_A D\_w (\tilde{L^0} D\_{\hat{V}} - D\_{L\_{theta}}) S \lambda ||^2
 $$
 
 subject to the constraints we outlined above.
