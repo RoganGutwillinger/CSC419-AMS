@@ -35,16 +35,3 @@ void appearance_mimicking_surfaces(
         const Eigen::VectorXd &weights, 
         const Eigen::VectorXd &mu, 
         Eigen::MatrixXd &DV);
-
-//  if you are feeling fancy, this is how they implemented the depth constraints
-//    zOrder       #Constraints x 8 [order,vIdx,vAIdx,vBIdx,vCIdx,u,v,w]
-//                 Contains the depth order constraints
-//                 for vertex <-> triangle point pairs
-//                 order: 1 vertex in front of triangle; -1 behind triangle
-//                 vIdx:  index of vertex
-//                 vAIdx: index of first vertex (A) of triangle
-//                 vBIdx: index of second vertex (B) of triangle
-//                 vCIdx: index of third vertex (C) of triangle
-//                 u: barycentric coordinate of point of triangle A 
-//                 v: barycentric coordinate of point of triangle B
-//                 w: barycentric coordinate of point of triangle C
