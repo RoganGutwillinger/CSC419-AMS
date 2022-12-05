@@ -32,6 +32,12 @@ NOTE: Deforming the `bunny.off` mesh takes a significant time to run (approximat
 
 ![Viewpoint 1, Original Mesh](/images/c_viewpoint1_original.png)
 
+![Viewpoint 1, Deformed Mesh](/images/c_viewpoint1_deformed.png)
+
+![Viewpoint 2, Original Mesh](/images/c_viewpoint2_original.png)
+
+![Viewpoint 2, Deformed Mesh](/images/c_viewpoint2_deformed.png)
+
 ## Implementation
 
 This project implements the main goal of the paper, constraining a 3D object to a specific volume while maintaining its appearance from a specific viewpoint. 
