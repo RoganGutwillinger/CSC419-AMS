@@ -30,11 +30,11 @@ defines $d(M, M^0, o)$ as the "surface similarity" or perceived difference of th
 the $i$ th vertex on the deformed mesh. We solve for these $\lambda_i$ values, as we can construct the deformed mesh with them.
 
 Let $A^0_i$ be the Voronoi area of the original mesh associated with the $i$ th vertex, let $L^0$ be the discrete Laplace-Beltrami operator of $M^0$, let $\hat{V}$ be the matrix stacking all normalized vertices of the mesh,
-let $D_{\lambda}$ be the diagonal matrix stacking the values of $\lambda_i$ along its diagonal, and define $D_{\lambda^0}$ similarily with values of $\lambda^0$. Finally, define $w_i$ as the weight of the $i$th vertex of the
+let $D_{\lambda}$ be the diagonal matrix stacking the values of $\lambda_i$ along its diagonal, and define $D_{\lambda^0}$ similarily with values of $\lambda^0$. Finally, define $w_i$ as the weight of the $i$ th vertex of the
 mesh. We assign a weight of $1$ to vertices that are visible from the viewpoint and a weight of $0.1$ to vertices that are hidden from the viewpoint. As descrbied in the paper, we can define the surface similarity as follows:
 
 $$
-d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})_i - (L^0 D_{\lambda^0} \hat{V})_i \frac{\lambda_i}{\lambda^0_i} ||^2
+d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})_{i} - (L^0 D_{\lambda^0} \hat{V})_{i} \frac{\lambda_i}{\lambda^0_i} ||^2
 $$
 
 This implementation lacks two components of the full scope of paper. Firstly, it does not implement...
