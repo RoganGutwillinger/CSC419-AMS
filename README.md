@@ -30,7 +30,7 @@ To view the original mesh, click `1`. To view the deformed mesh for the first vi
 
 NOTE: Deforming the `bunny.off` mesh takes a significant time to run (approximately 15 minutes on my device).
 
-![Viewpoint 1, Original Mesh](.\images\c_viewpoint1_original.png)
+![Viewpoint 1, Original Mesh](/images/c_viewpoint1_original.png)
 
 ## Implementation
 
@@ -84,5 +84,5 @@ Finally, as previously mentioned, the implementation use's the libigl function `
 constraints to improve performance. To my knowledge, libigl does not currently contain a function to solve this kind of optimization, so other tools such as Mosek would need to be used if this improvement were to be implemented.
 
 ## References
-Christian Schüller, Daniele Panozzo, and Olga Sorkine-Hornung. 2014. Appearance-mimicking surfaces. ACM Trans. Graph. 33, 6, Article 216 (November 2014), 10 pages. https://doi.org/10.1145/2661229.2661267
+Christian SchÃ¼ller, Daniele Panozzo, and Olga Sorkine-Hornung. 2014. Appearance-mimicking surfaces. ACM Trans. Graph. 33, 6, Article 216 (November 2014), 10 pages. https://doi.org/10.1145/2661229.2661267
 
