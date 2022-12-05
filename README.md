@@ -49,7 +49,7 @@ To efficiently solve this problem, the paper outlines how to vectorize this opti
 $\tilde{L^0} = L^0 \bigotimes I_3$, let $D_{\hat{V}}$ be the diagonal matrix with row-wise stacked elements of $\hat{V}$, let $S = I_n \bigotimes [1, 1, 1]^T$ where $n$ is the number of vertices, and define $L_{\theta}$ as follows:
 
 $$
-L_{\theta} = D^{-1}_{S \lambda^0} \tilde{L^0} D_{\hat{V}} S \lambda^0
+L_{\theta} = D^{-1}\_{S \lambda^0} \tilde{L^0} D_{\hat{V}} S \lambda^0
 $$
 
 1. No z-ordering
