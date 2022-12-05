@@ -37,7 +37,7 @@ $$
 d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})_{i} - (L^0 D_{\lambda^0} \hat{V})_{i} \frac{\lambda_i}{\lambda^0_i} ||^2
 $$
 
-To constrain the volume of the deformed mesh, we define $\lambda^{min}_i$ and $\lambda^{max}_i$ such that:
+To constrain the volume of the deformed mesh, we define $\lambda^{min}\_i$ and $\lambda^{max}_i$ such that:
 
 $$
 \lambda^{min}_i \leq \lambda_i \leq \lambda^{max}_i
