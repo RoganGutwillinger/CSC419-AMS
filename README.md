@@ -51,7 +51,7 @@ let $D_{\lambda}$ be the diagonal matrix stacking the values of $\lambda_i$ alon
 mesh. We assign a weight of $1$ to vertices that are visible from the viewpoint and a weight of $0.1$ to vertices that are hidden from the viewpoint. As descrbied in the paper, we can define the surface similarity as follows:
 
 $$
-d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})_{i} - (L^0 D_{\lambda^0} \hat{V})_{i} \frac{\lambda_i}{\lambda^0_i} ||^2
+d(M, M^0, o) = \sum_{i \in V} w^2_i A^0_i || (L^0 D_{\lambda} \hat{V})\_i - (L^0 D_{\lambda^0} \hat{V})\_i \frac{\lambda_i}{\lambda^0_i} ||^2
 $$
 
 To constrain the volume of the deformed mesh, we define $\lambda^{min}\_i$ and $\lambda^{max}_i$ such that:
